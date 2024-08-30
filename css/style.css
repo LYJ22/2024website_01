@@ -4,6 +4,7 @@
 a:link,a:visited{text-decoration: none; color: black;}
 ul, li{list-style: none;}
 
+
 /* header */
 :root {
     --font-color-base: #000;
@@ -43,6 +44,27 @@ ul, li{list-style: none;}
     --font-color-product: #7d7d7d;
 }
 
+/* image slider - visual */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 .ec-base-product .prdList .thumbnail{
     /* position: relative; */
