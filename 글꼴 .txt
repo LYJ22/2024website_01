@@ -1,0 +1,80 @@
+1. font
+
+h2 60
+h3 32
+title 18 bold, basic 15~14 
+button 10 
+
+2.color
+3.layout
+html div.container.section
+
+helloproject
+
+body {
+ font-size: 13px; 
+ font-family: 'Noto-Sans-Condensed', 'Noto Sans KR', Arial, "Apple SD Gothic Neo", "Noto Sans Regular", "맑은 고딕", "malgun gothic", "돋움", "dotum", sans-serif;
+
+:root {
+  --font-color-base: #000;
+    --font-color-main2: #000;
+    --font-color-secondary: #000;
+    --font-color-warn: #FF5E34;
+    --font-color-success: #0985df;
+    --font-color-search: #2e2e2e;
+    --font-color-mouseOn: #000;
+    --font-color-mouseOff2: #aaa;
+    --font-color-title2: #666;
+    --font-color-sale: #000;
+    --font-color-point: #111;
+    --font-color-customePrice: #c0c0c0;
+    --font-color-cate: #000;
+    --font-color-icon: #aaa;
+    --font-color-tel: #222;
+    --font-color-footer: #fff;
+    --font-color-error: #f00;
+    --font-color-time: #f76560;
+    --bg-color-line4: #575757;
+    --bg-color-footer: #3b3b3b;
+    --bg-color-footer2: #000;
+    --font-color-main: #fff;
+    --font-color-heading: #000;
+    --font-color-primary: #000;
+    --font-color-base2: #000;
+    --font-color-submenu: #000;
+    --font-color-title: #757575;
+    --font-color-mouseOn: #000;
+    --font-color-mouseOff: #757575;
+    --font-color-selectOff: #757575;
+    --font-color-boardList: #666;
+    --font-color-subTit: #2e2e2e;
+    --font-color-sub: #353535;
+    --font-color-check: #202020;
+    --font-color-product: #7d7d7d;
+}
+
+왼쪽 메뉴 ALL PRODUCT CUSTOMER CARE 
+13px body 와 동일 
+
+오른쪽 메뉴 CART MY PAGE LOGIN JOIN
+li class = "xans-element- xans-layout xans-layout-statelogoff cart "> 
+font-size: 12px; 
+
+첫 번째 배너 
+h1 36px Noto-Sans-Condensed-SemiBold color:#ffffff;
+span 16px Noto-Sans-Condensed
+p 26px Noto-Sans-Condensed
+MORE button 14px 
+
+두 번째 배너
+BEST ITEM : 36px Noto-Sans-Condensed-SemiBold #000000
+span 16px Noto-Sans-Condensed
+상품명 18px Noto-Sans-KR 
+가격 20px Noto-Sans-KR
+원래 가격 16px #C0C0C0 
+
+인스타그램 36px Noto-Sans-Condensed-SemiBold 
+
+footer 12px Noto-Sans-Condensed
+ 
+
