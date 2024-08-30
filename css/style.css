@@ -5,8 +5,71 @@ a:link,a:visited{text-decoration: none; color: black;}
 ul, li{list-style: none;}
 
 /* header */
+#header{
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+}
 
- 
+.promoBanner{
+    position: relative;
+    width: 100%;
+    height: 44px;
+    color: white;
+}
+.promoBanner .promoWrap{
+    width: 100%;
+    text-align: center;
+}
+.promoBanner i{
+    position: absolute;
+    top: 50%; right: 10px;
+    cursor: pointer;
+}
+
+.navbar .menuWrap{
+    width: 100%;
+    min-width: 1025px;
+}
+.navbar .menuWrap .navbar-brand img{
+    height: 75px;
+}
+@media(max-width: 1024px){
+    .navbar .menuWrap .navbar-brand img{
+        height: 40px;
+    }
+}
+
+.leftMenu .allProduct .leftmain{
+    position: relative;
+    display: inline-block;
+    height: auto;
+    padding: 35px 0;
+    font-size: 13px;
+    vertical-align: middle;
+}
+.leftMenu .allProduct .leftmain a{
+    padding: 0.18px;
+    font-weight: 400;
+}
+
+#header .rightMenu{
+    /* position: absolute;
+    right: 0; top: 0; */
+}
+#header .rightMenu ul{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+}
+#header .rightMenu li{
+    display: inline-block;
+    height: auto;
+    padding: 30px 18px;
+    font-size: 12px;
+}
 /* image slider - visual */
 
 

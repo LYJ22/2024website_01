@@ -10,10 +10,91 @@
 </head>
 <body>
     <!-- menu -->
-    <header>
-        <nav>
+    <header id="header">
+        <!-- 프로모션 배너 라인 -->
+        <div class="promoBanner bg-black d-flex justify-content-center pt-2">
+            <div class="promoWrap">
+                <a href="#!" class="text-white">회원가입 시 2천원 할인 쿠폰 즉시 발급</a>
+            </div>
+            <i class="fa-solid fa-xmark fa-2xl" onclick="promoBannerClose()"></i>
+        </div>
+        <!-- menu bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <div class="row">
+                    <div class="menuWrap d-flex align-items-center">
+                        <!-- logo -->
+                         <div class="menuLogo order-2 d-flex align-items-center">
+                             <a class="navbar-brand" href="#">
+                               <img src="./images/logo_header_white2.png" alt="" class="white d-block">
+                               <img src="./images/logo_header_black.png" alt="" class="black d-none">
+                             </a>
+                         </div>
+                        
+                        <div class="leftMenu order-1">
+                            <div class="leftCategory d-flex justify-content-center align-items-center">
+                                <ul class="allProduct">
+                                    <li class="prod_main leftmain" onmouseover="MenuSubOpen('.leftMenu .leftmain .prod_sub')" onmouseout="MenuSubClose('.leftMenu .leftmain .prod_sub')">
+                                        <a href="#!" class="text-white">ALL PRODUCT</a>
+                                    </li>
+                                </ul>
+                                <ul class="customerCare">
+                                    <li class="cust_main leftmain">
+                                        <a href="#!" class="text-white">CUSTOMER CARE</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-        </nav>
+                        <div class="rightMenu order-3">
+                            <ul class="d-flex justify-content-center align-items-center">
+                                <li>
+                                    <a href="#!" class="text-white">CART</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">MY PAGE</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">LOGIN</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">JOIN</a>
+                                </li>
+                                <li>
+                                    <a href="#!"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- = toggle bar -->
+                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </div>
+          </nav>
     </header>
 
     <div class="main">
@@ -54,5 +135,27 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- header script -->
+    <script>
+        function promoBannerClose(){
+            $(".promoBanner").addClass("d-none");
+        }
+
+        function MenuSubOpen(sub){
+            sub.removeClass("d-none");
+            sub.addClass("d-block")
+        }
+        function MenuSubClose(sub){
+            sub.removeClass("d-block");
+            sub.addClass("d-none");
+        }
+        $(".leftMenu .allProduct .leftmain").hover(function(){
+            $(".leftMenu .allProduct .leftmain").removeClass("d-none")
+        },function(){
+            $(this+' .sub').addClass("d-none")
+        })
+    </script>
+
 </body>
 </html>
