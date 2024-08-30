@@ -1,12 +1,22 @@
-@charset "utf-8";
+1. font
 
-*{margin: 0; padding: 0;}
-a:link,a:visited{text-decoration: none; color: black;}
-ul, li{list-style: none;}
+h2 60
+h3 32
+title 18 bold, basic 15~14 
+button 10 
 
-/* header */
+2.color
+3.layout
+html div.container.section
+
+helloproject
+
+body {
+ font-size: 13px; 
+ font-family: 'Noto-Sans-Condensed', 'Noto Sans KR', Arial, "Apple SD Gothic Neo", "Noto Sans Regular", "맑은 고딕", "malgun gothic", "돋움", "dotum", sans-serif;
+
 :root {
-    --font-color-base: #000;
+  --font-color-base: #000;
     --font-color-main2: #000;
     --font-color-secondary: #000;
     --font-color-warn: #FF5E34;
@@ -43,64 +53,28 @@ ul, li{list-style: none;}
     --font-color-product: #7d7d7d;
 }
 
+왼쪽 메뉴 ALL PRODUCT CUSTOMER CARE 
+13px body 와 동일 
 
-.ec-base-product .prdList .thumbnail{
-    /* position: relative; */
-    text-align: center;
-    width:auto;
-    white-space: normal;
-}
+오른쪽 메뉴 CART MY PAGE LOGIN JOIN
+li class = "xans-element- xans-layout xans-layout-statelogoff cart "> 
+font-size: 12px; 
 
+첫 번째 배너 
+h1 36px Noto-Sans-Condensed-SemiBold color:#ffffff;
+span 16px Noto-Sans-Condensed
+p 26px Noto-Sans-Condensed
+MORE button 14px 
 
-.ec-base-product .prdList > li {
-    display:inline-block;
-    margin: 0 0 3px;
-    color:var(--font-color-mouseOff);
-    vertical-align: top;
-}
+두 번째 배너
+BEST ITEM : 36px Noto-Sans-Condensed-SemiBold #000000
+span 16px Noto-Sans-Condensed
+상품명 18px Noto-Sans-KR 
+가격 20px Noto-Sans-KR
+원래 가격 16px #C0C0C0 
 
-.main{
-    display:block;
-    justify-content: center;
-        align-items: center;
-}
+인스타그램 36px Noto-Sans-Condensed-SemiBold 
 
-.productTitle{
-    background-color: skyblue;
-    padding: 100px 0;
-    line-height: 200px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
-}
-
-.bestItems2 .text-center{
-    font-weight: bold;
-}
-
-
-span{
-    background-color: salmon;
-    font-weight: lighter;
-    font-size: 16px;
-    padding: 100px 0;
-        line-height: 200px;
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        align-items: center;
-}
-
-/* 상품 칸 - product */
-
-
-/* instagram */
-
-
-/* footer */
-
-
-/* kakaotalk */
-
+footer 12px Noto-Sans-Condensed
+ 
 
