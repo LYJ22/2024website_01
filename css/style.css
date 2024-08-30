@@ -4,6 +4,44 @@
 a:link,a:visited{text-decoration: none; color: black;}
 ul, li{list-style: none;}
 
+:root {
+    --font-color-base: #000;
+    --font-color-main2: #000;
+    --font-color-secondary: #000;
+    --font-color-warn: #FF5E34;
+    --font-color-success: #0985df;
+    --font-color-search: #2e2e2e;
+    --font-color-mouseOn: #000;
+    --font-color-mouseOff2: #aaa;
+    --font-color-title2: #666;
+    --font-color-sale: #000;
+    --font-color-point: #111;
+    --font-color-customePrice: #c0c0c0;
+    --font-color-cate: #000;
+    --font-color-icon: #aaa;
+    --font-color-tel: #222;
+    --font-color-footer: #fff;
+    --font-color-error: #f00;
+    --font-color-time: #f76560;
+    --bg-color-line4: #575757;
+    --bg-color-footer: #3b3b3b;
+    --bg-color-footer2: #000;
+    --font-color-main: #fff;
+    --font-color-heading: #000;
+    --font-color-primary: #000;
+    --font-color-base2: #000;
+    --font-color-submenu: #000;
+    --font-color-title: #757575;
+    --font-color-mouseOn: #000;
+    --font-color-mouseOff: #757575;
+    --font-color-selectOff: #757575;
+    --font-color-boardList: #666;
+    --font-color-subTit: #2e2e2e;
+    --font-color-sub: #353535;
+    --font-color-check: #202020;
+    --font-color-product: #7d7d7d;
+}
+
 /* header */
 #header{
     font-size: 13px;
@@ -70,8 +108,76 @@ ul, li{list-style: none;}
     padding: 30px 18px;
     font-size: 12px;
 }
-/* image slider - visual */
 
+/* image slider - visual */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.ec-base-product .prdList .thumbnail{
+    /* position: relative; */
+    text-align: center;
+    width:auto;
+    white-space: normal;
+}
+
+
+.ec-base-product .prdList > li {
+    display:inline-block;
+    margin: 0 0 3px;
+    color:var(--font-color-mouseOff);
+    vertical-align: top;
+}
+
+.main{
+    display:block;
+    justify-content: center;
+        align-items: center;
+}
+
+.productTitle{
+    background-color: skyblue;
+    padding: 100px 0;
+    line-height: 200px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.bestItems2 .text-center{
+    font-weight: bold;
+}
+
+
+span{
+    background-color: salmon;
+    font-weight: lighter;
+    font-size: 16px;
+    padding: 100px 0;
+        line-height: 200px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+}
 
 /* 상품 칸 - product */
 
