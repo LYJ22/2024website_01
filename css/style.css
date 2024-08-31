@@ -42,12 +42,14 @@ ul, li{list-style: none;}
     --font-color-product: #7d7d7d;
 }
 
+
 @font-face {
     font-family: 'Noto Sans KR';
     src: url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
     font-weight: normal;
     font-style:normal;
 }
+
 
 /* header */
 #header{
