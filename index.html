@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+    <!-- font : noto sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         body {
@@ -37,88 +40,104 @@
 <body>
     <!-- menu -->
     <header id="header">
-        <!-- 프로모션 배너 라인 -->
-        <div class="promoBanner bg-black d-flex justify-content-center pt-2">
-            <div class="promoWrap">
-                <a href="#!" class="text-white">회원가입 시 2천원 할인 쿠폰 즉시 발급</a>
+        <!-- 검색창 -->
+        <div class="form">
+            <div class="searchKeyword">
+                <h3 class="searchTitle text-center fw-normal">Search</h3>
+                <fieldset class="d-flex my-0 mx-md-auto align-top border-bottom border-black">
+                    <input type="text" class="border-0">
+                    <button id="searchBtn" class="searchBtn2 border-0 bg-transparent align-middle"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                </fieldset>
+                <button class="closeSearchBtn position-absolute border-0 bg-transparent" onclick="MenuSearchClose()"><i class="fa-solid fa-xmark fa-xl"></i></button>
             </div>
-            <i class="fa-solid fa-xmark fa-2xl" onclick="promoBannerClose()"></i>
-        </div>
-        <!-- menu bar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
+        </form>
+        <nav class="navbar navbar-expand-lg fixed-top d-flex flex-column pt-0 pb-0">
+            <!-- 프로모션 배너 라인 -->
+            <div class="promoBanner position-relative w-100 bg-black text-white">
+                <div class="promoWrap text-center d-block pt-2">
+                    <a href="#" class="text-white">회원가입 시 2천원 할인 쿠폰 즉시 발급</a>                
+                </div>
+                <i class="fa-solid fa-xmark fa-2xl position-absolute top-50" onclick="promoBannerClose()"></i>
+            </div>
+            <!-- menu bar -->
+            <div class="inner">
                 <div class="row">
                     <div class="menuWrap d-flex align-items-center">
                         <!-- logo -->
-                         <div class="menuLogo order-2 d-flex align-items-center">
-                             <a class="navbar-brand" href="#">
-                               <img src="./images/logo_header_white2.png" alt="" class="white d-block">
+                         <div class="menuLogo order-2">
+                             <a class="logo" href="#">
+                               <img src="./images/logo_header_white2.png" alt="" class="white">
                                <img src="./images/logo_header_black.png" alt="" class="black d-none">
                              </a>
                          </div>
                         
-                        <div class="leftMenu order-1">
+                        <div id="headerMenu" class="leftMenu position-absolute order-1">
                             <div class="leftCategory d-flex justify-content-center align-items-center">
-                                <ul class="allProduct">
+                                <ul class="allProduct m-0 p-0">
                                     <li class="prod_main leftmain" onmouseover="MenuSubOpen('.leftMenu .leftmain .prod_sub')" onmouseout="MenuSubClose('.leftMenu .leftmain .prod_sub')">
-                                        <a href="#!" class="text-white">ALL PRODUCT</a>
+                                        <a id="MenuMainTitle" href="#!" class="text-white ">ALL PRODUCT</a>
                                     </li>
                                 </ul>
-                                <ul class="customerCare">
+                                <ul class="customerCare m-0 p-0">
                                     <li class="cust_main leftmain">
-                                        <a href="#!" class="text-white">CUSTOMER CARE</a>
+                                        <a id="MenuMainTitle" href="#!" class="text-white">CUSTOMER CARE</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="rightMenu order-3">
-                            <ul class="d-flex justify-content-center align-items-center">
+                        <div id="headerMenu" class="rightMenu position-absolute top-0 end-0 order-3">
+                            <ul class="m-0 p-0">
                                 <li>
-                                    <a href="#!" class="text-white">CART</a>
+                                    <a id="MenuMainTitle" href="#!" class="text-white me-1">CART</a>
                                 </li>
                                 <li>
-                                    <a href="#!" class="text-white">MY PAGE</a>
+                                    <a id="MenuMainTitle" href="#!" class="text-white">MY PAGE</a>
                                 </li>
                                 <li>
-                                    <a href="#!" class="text-white">LOGIN</a>
+                                    <a id="MenuMainTitle" href="#!" class="text-white">LOGIN</a>
                                 </li>
                                 <li>
-                                    <a href="#!" class="text-white">JOIN</a>
+                                    <a id="MenuMainTitle" href="#!" class="text-white">JOIN</a>
                                 </li>
                                 <li>
-                                    <a href="#!"></a>
+                                    <button id="searchBtn" class="searchBtn1 border-0 bg-transparent align-middle" onclick="MenuSearchOpen()">
+                                        <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
-                        <!-- = toggle bar -->
-                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                              <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </div> -->
                     </div>
                     
                 </div>
+                <button class="headerToggle position-absolute end-0 m-0 p-0 border-0 bg-transparent ">
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+                <!-- = toggle bar -->
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div> -->
             </div>
           </nav>
     </header>
@@ -323,10 +342,32 @@
             sub.removeClass("d-block");
             sub.addClass("d-none");
         }
+        function MenuSearchClose(){
+            $('#header .searchKeyword').removeClass("searchVisible");
+        }
+        function MenuSearchOpen(){
+            $('#header .searchKeyword').addClass("searchVisible");
+        }
         $(".leftMenu .allProduct .leftmain").hover(function(){
             $(".leftMenu .allProduct .leftmain").removeClass("d-none")
         },function(){
             $(this+' .sub').addClass("d-none")
+        })
+        window.addEventListener('scroll',function(){           
+            if($(this).scrollTop() > 0){
+                $('#header nav').addClass("fixed-top bg-white");
+                $('#header nav').removeClass("position-absolute");
+                $('#header .logo .white').addClass("d-none");
+                $('#header .logo .black').removeClass("d-none");
+                $('#header #headerMenu #MenuMainTitle').removeClass("text-white")
+            }
+            else {
+                $('#header nav').addClass("position-absolute");
+                $('#header nav').removeClass("fixed=top bg-white");
+                $('#header .logo .black').addClass("d-none");
+                $('#header .logo .white').removeClass("d-none");
+                $('#header #headerMenu #MenuMainTitle').addClass("text-white")
+            }
         })
     </script>
 
