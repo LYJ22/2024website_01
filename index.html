@@ -12,15 +12,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
         integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+            <style>
+                
+            </style>
+    <title>헬로 프로젝트 Hello project</title>
     <style>
         body {
-            font-family: 'Noto Sans KR';
+            font-family: 'Noto Sans KR',"Noto Sans",
+        sans-serif;
             min-width: 360px;
             max-width: 1920px;
             /* background: var(--bg-color-body); */
         }
-
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
         .visual{
             position: relative;
         }
@@ -198,20 +206,19 @@
         </div>
 
         <!-- 상품 칸 -->
-        <section class="bestItem2">
-            <div class="productTitle">
+        <section class="bestItem2 ">
+            <div class="productTitle mb-3">
                 <div class="title">BEST ITEM</div>
                 <span>헬로 프로젝트 베스트 아이템</span>
             </div>
             <div class="inner">
-               
-                <div class="NewItem-1 col-md-6 mb-4">
+                <div class="NewItem-1">
                     <ul class="prdList">
                         <li>
                             <div class="item ms-auto">
                                 <div class="thumbnail">
                                     <a href="#!">
-                                        <img src="./images/bestItem1.jpg" id="prdImage"alt="" loading="lazy" style="display-block" class="img-fluid d-flex d-sm-block d-lg-block">
+                                        <img src="./images/bestItem1.jpg" id="prdImage" alt="" loading="lazy" style="display:block" class="img-fluid d-flex  order-1 order-md-2 mb-3 mb-md-0">
                                     <span class="ico_soldOut"></span>
                                     </a>
                                 </div>
@@ -230,8 +237,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="bestItems-slider col-md-6 mb-4">
-                    <div class="swiper bISwiper ">
+                <div class="bestItems-slider">
+                    <div class="swiper bISwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide carousel active">
                                 <a href="#!">
@@ -249,7 +256,7 @@
                             </div>
                             <div class="swiper-slide carousel active">
                                 <a href="#!">
-                                    <img src="./images/bestItem3.png" alt="" class="img-fluid carousel active">
+                                    <img src="./images/bestItem3.png" alt="" class="img-fluid carousel active ">
                                 </a>    
                                 <strong><a href="#!">
                                         <span class="title" >벌레 퇴치 버그프리 스프레이 2+1 모기 털진드기 기피제</span>
@@ -278,8 +285,9 @@
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
+               
                 </div>
             </div>
         </section>
@@ -322,6 +330,7 @@
             autoplay: {
                 delay: 3000,
             },
+            
             scrollbar: {
                 el: '.swiper-scrollbar',
                 hide:true
@@ -372,7 +381,6 @@
         });
     </script>
 
-
     <!-- bestItem2 script  -->
     <script>
         var swiper = new Swiper(".bISwiper", {
@@ -394,6 +402,6 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-  </script>
+    </script>
 </body>
 </html>

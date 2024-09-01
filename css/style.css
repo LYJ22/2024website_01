@@ -205,7 +205,9 @@ ul, li{list-style: none;}
 }
 .NewItem-1 .description {
     height:126px;
+    margin-left: 200px;
 }
+
 .product-price{
     font-weight: bold;
     font-size: 20px;
@@ -235,6 +237,7 @@ ul, li{list-style: none;}
     display:flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-left: 200px;
 } 
 
 /* .NewItem-1 .item{
@@ -267,20 +270,17 @@ ul, li{list-style: none;}
 
 .bestItem2 .inner {
     
-    justify-content: space-between;
-    /* 두 요소 사이에 공간 배분 */
-display: flex;
-    align-items: flex-start;
-    /* 두 요소가 상단 정렬되도록 */
+    /* justify-content: space-between; */
+    justify-content: center;
+    display: flex;
+    /* align-items: flex-start; */
+    
 }
 
 .bestItem2 .NewItem-1,
 .bestItem2 .bestItems-slider {
     flex: 1;
-    /* 두 요소가 같은 비율로 공간을 차지하도록 */
-    margin: 0 10px;
-   
-    /* 요소 간의 간격 조절 */
+    margin:0px;
 }
 
 .bestItem2 .productTitle {
@@ -288,6 +288,8 @@ display: flex;
     height: 117px;
     text-align: center;
     display: block;
+    
+    
 }
 
 .bestItems-slider .bISwiper .swiper-slide .title{
@@ -305,8 +307,13 @@ display: flex;
      .NewItem-1,
      .bestItems-slider {
          width: 100%;
+   
      }
  }
+
+ /* .bestItem2 .prdList{
+    margin-left: -80px;
+ } */
 /* instagram */
 
 
