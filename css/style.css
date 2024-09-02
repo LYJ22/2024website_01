@@ -472,7 +472,9 @@ body {
     margin-left: -80px;
  } */
 /* instagram */
-
+.instagram .instaIcon{
+    padding: 0 0 20px 0;
+}
 
 /* footer */
 footer {
