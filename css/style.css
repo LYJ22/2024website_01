@@ -71,7 +71,6 @@ body {
 #header{
     font-size: 13px;
     font-weight: 400;
-    width: 100%;
 }
 #header nav{
     left: 0; top: 0;
@@ -147,9 +146,12 @@ body {
     vertical-align: top;
     height: 75px;
 }
+#header #smallMenu img{
+    height: 40px;
+}
 /* header - left menu */
 #header .leftMenu{
-    top: 10px; left: 0;
+    top: 10px;
 }
 #header .leftMenu ul a{
     padding: 0 18px;
@@ -160,8 +162,29 @@ body {
     position: relative;
     display: inline-block;
     height: auto;
-    padding: 35px 0;
+    width: 120px; padding: 35px 0;
     vertical-align: middle;
+}
+#header .leftMenu .leftSubCategory{
+    background-color: var(--font-color-base);
+}
+#header .leftMenu .lsc1{
+    top: 55px; left: -20px;
+    
+}
+#header .leftMenu .lsc1 ul{
+    width: 120px;
+    padding: 20px 0;
+    font-size: 11px;
+}
+#header .leftMenu .lsc1 li, #header .leftMenu .lsc2 a{
+    line-height: 30px;
+}
+#header .leftMenu .lsc2{
+    top: 55px;
+}
+#header .leftMenu .lsc2 a{
+    padding: 0 18px;
 }
 /* header - right menu */
 #header .rightMenu li{
@@ -183,6 +206,12 @@ body {
 #header .searchBtn2{
     width: 28px; height: 28px;
     margin: 15px 0 0;
+}
+#header #smallMenu .shoppingCart{
+    right: 50px; top: 15px;
+}
+#header #smallMenu .searchBtn1{
+    top: 10px;
 }
 /* header - toggle */
 #header .headerToggle{
@@ -214,11 +243,18 @@ body {
         font-size: 15px;
     }
 }
-@media(max-width: 1024px){
-    #header .inner .menuWrap .menuLogo img{
-        height: 40px;
+@media(min-width: 1025px){
+    #header .inner #smallMenu{
+        display: none;
     }
-
+}
+@media(max-width: 1024px){
+    #header #largeMenu{
+        display: none;
+    }
+    #header .inner .headerToggle{
+        left: 5px; top: 16px;
+    }
 }
 
 /* image slider - visual */
@@ -436,8 +472,29 @@ body {
 
 
 /* footer */
+.footer-boot {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    font-size: 12px;
+    padding: 40px 0px;
+    padding-left: 30px;
+}
 
+.footer-boot img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-boot .util a {
+    color: #fff;
+    text-align: left;
+}
 
 /* kakaotalk */
-
+.kakao_ch{
+    right: 15px; bottom: 20px;
+    width: 80px;
+}
 
