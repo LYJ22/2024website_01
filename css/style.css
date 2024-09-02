@@ -472,6 +472,9 @@ body {
 
 
 /* footer */
+footer {
+    background-color: #000;
+}
 .footer-boot {
     position: relative;
     width: 100%;
