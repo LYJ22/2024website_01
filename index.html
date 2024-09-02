@@ -49,7 +49,7 @@
 </head>
 <body>
     <!-- menu -->
-    <header id="header">
+    <header id="header" class="w-100">
         <!-- 검색창 -->
         <div class="form">
             <div class="searchKeyword">
@@ -72,25 +72,40 @@
             <!-- menu bar -->
             <div class="inner">
                 <div class="row">
-                    <div class="menuWrap d-flex align-items-center">
+                    <div id="largeMenu" class="menuWrap">
                         <!-- logo -->
-                         <div class="menuLogo order-2">
+                         <div class="menuLogo d-flex justify-content-center order-2">
                              <a class="logo" href="#">
                                <img src="./images/logo_header_white2.png" alt="" class="white">
                                <img src="./images/logo_header_black.png" alt="" class="black d-none">
                              </a>
                          </div>
                         
-                        <div id="headerMenu" class="leftMenu position-absolute order-1">
+                        <div id="headerMenu" class="leftMenu position-absolute start-0 order-1">
                             <div class="leftCategory d-flex justify-content-center align-items-center">
                                 <ul class="allProduct m-0 p-0">
                                     <li class="prod_main leftmain" onmouseover="MenuSubOpen('.leftMenu .leftmain .prod_sub')" onmouseout="MenuSubClose('.leftMenu .leftmain .prod_sub')">
                                         <a id="MenuMainTitle" href="#!" class="text-white ">ALL PRODUCT</a>
+                                        <div class="leftSubCategory lsc1 position-absolute">
+                                            <ul class="float-none text-center">
+                                                <li class="d-block m-0 p-0">
+                                                    <a href="#!" class="text-white text-nowrap">CLEAN AIR PROJECT</a>
+                                                </li>
+                                                <li class="d-block m-0 p-0">
+                                                    <a href="#!" class="text-white text-nowrap">SUMMER PROJECT</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                 </ul>
                                 <ul class="customerCare m-0 p-0">
-                                    <li class="cust_main leftmain">
+                                    <li class="cust_main leftmain position-relative d-inline-block h-auto align-middle">
                                         <a id="MenuMainTitle" href="#!" class="text-white">CUSTOMER CARE</a>
+                                        <div class="leftSubCategory lsc2 position-absolute start-0">
+                                            <a href="#!" class="d-block text-white">NOTICE</a>
+                                            <a href="#!" class="d-block text-white">REVIEW</a>
+                                            <a href="#!" class="d-block text-white">Q&A</a>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -111,7 +126,7 @@
                                     <a id="MenuMainTitle" href="#!" class="text-white">JOIN</a>
                                 </li>
                                 <li>
-                                    <button id="searchBtn" class="searchBtn1 border-0 bg-transparent align-middle" onclick="MenuSearchOpen()">
+                                    <button id="searchBtn" class="searchBtn1 border-0 bg-transparent align-middle text-white" onclick="MenuSearchOpen()">
                                         <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
                                     </button>
                                 </li>
@@ -119,35 +134,25 @@
                         </div>
                     </div>
                     
+                    <div id="smallMenu">
+                        <!-- logo -->
+                        <div class="menuLogo d-flex justify-content-center">
+                            <a class="logo" href="#">
+                              <img src="./images/logo_header_white2.png" alt="" class="white">
+                              <img src="./images/logo_header_black.png" alt="" class="black d-none">
+                            </a>
+                        </div>
+                        <div class="shoppingCart position-absolute">
+                            <a href="#!" class="text-white"><i class="fa-solid fa-bag-shopping fa-2xl"></i></a>
+                        </div>
+                        <button id="searchBtn" class="searchBtn1 position-absolute end-0 pe-0 border-0 bg-transparent align-middle text-white" onclick="MenuSearchOpen()">
+                            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                        </button>
+                    </div>
                 </div>
-                <button class="headerToggle position-absolute end-0 m-0 p-0 border-0 bg-transparent ">
+                <button class="headerToggle position-absolute end-0 m-0 p-0 border-0 bg-transparent text-white">
                     <i class="fa-solid fa-bars fa-xl"></i>
                 </button>
-                <!-- = toggle bar -->
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div> -->
             </div>
           </nav>
     </header>
@@ -325,12 +330,28 @@
     </div>
 
     <!-- footer -->
+    <!-- footer -->
     <footer>
-
+        <div class="footer-boot">
+            <div class="logo">
+                <img src="./images/logo_header_white2.png" alt="">
+            </div>
+            <div class="copyright">Copyright ⓒ hello project. All Rights Reserved.</div><br>
+            <div class="bank-info">기업은행 63301268201013 예금주 :(주)아르케인터내셔날</div><br>
+            <div class="info-address"><span>법인명(상호):(주) 아르케인터내셔날 |</span><span>대표자(성명):박진우,박성은 |</span><span>사업자 등록번호
+                    안내:[220-88-21117] |<span>통신판매업 신고 제2011 서울강남 2058호[사업자정보확인] |</span><span>전화: 1577-2039
+                        |</span><span>주소:06246 서울특별시 강남구 논현로 419 14층(역삼동,PMK 빌딩)
+                        |</span><span>개인정보보호책임자:박성은(hello@helloproject.co.kr) |</span><span>Contact hello@helloproject.co.kr for
+                        more information.</span></div><br>
+            <div class="util"><a href="#!">이용약관 </a><a href="#!">이용안내 </a><a href="#!">개인정보처리방침</a></div>
+        </div>
     </footer>
 
     <!-- 우하단 카카오톡 -->
-    <div class="kakao_ch">
+    <div class="kakao_ch position-fixed z-3">
+        <a href="#!" class="kakao_block">
+            <img src="./images/kakao_ch_03.png" alt="" class="position-relative w-100 border-0 align-top">
+        </a>
     </div>
     <script>
      var mySwiper =   new Swiper('.swiper-container', {
@@ -393,14 +414,20 @@
                 $('#header nav').removeClass("position-absolute");
                 $('#header .logo .white').addClass("d-none");
                 $('#header .logo .black').removeClass("d-none");
-                $('#header #headerMenu #MenuMainTitle').removeClass("text-white")
+                $('#header #headerMenu #MenuMainTitle').removeClass("text-white");
+                $('#header .inner .searchBtn1').removeClass("text-white");
+                $('#header .shoppingCart a').removeClass("text-white");
+                $('#header .headerToggle').removeClass("text-white");
             }
             else {
                 $('#header nav').addClass("position-absolute");
                 $('#header nav').removeClass("fixed=top bg-white");
                 $('#header .logo .black').addClass("d-none");
                 $('#header .logo .white').removeClass("d-none");
-                $('#header #headerMenu #MenuMainTitle').addClass("text-white")
+                $('#header #headerMenu #MenuMainTitle').addClass("text-white");
+                $('#header .inner .searchBtn1').addClass("text-white");
+                $('#header .shoppingCart a').addClass("text-white");
+                $('#header .headerToggle').addClass("text-white");
             }
         })
     </script>
