@@ -362,7 +362,7 @@ body {
 }
 .NewItem-1 .description {
     height:126px;
-    margin-left: 200px;
+    /* margin-left: 200px; */
 }
 
 .product-price{
@@ -394,7 +394,7 @@ body {
     display:flex;
     justify-content: center;
     margin-bottom: 20px;
-    margin-left: 200px;
+    /* margin-left: 200px; */
 } 
 
 /* .NewItem-1 .item{
