@@ -117,9 +117,9 @@
                         <div id="headerMenu" class="leftMenu position-absolute start-0 order-1">
                             <div class="leftCategory d-flex justify-content-center align-items-center">
                                 <ul class="allProduct m-0 p-0">
-                                    <li class="prod_main leftmain" onmouseover="MenuSubOpen('.leftMenu .leftmain .prod_sub')" onmouseout="MenuSubClose('.leftMenu .leftmain .prod_sub')">
+                                    <li class="prod_main leftmain" onmouseover="MenuSubOpen('#header #headerMenu .lsc1')" onmouseleave="MenuSubClose('#header #headerMenu .lsc1')">
                                         <a id="MenuMainTitle" href="#!" class="text-white ">ALL PRODUCT</a>
-                                        <div class="leftSubCategory lsc1 position-absolute">
+                                        <div class="leftSubCategory lsc1 position-absolute d-none">
                                             <ul class="float-none text-center">
                                                 <li class="d-block m-0 p-0">
                                                     <a href="#!" class="text-white text-nowrap">CLEAN AIR PROJECT</a>
@@ -132,9 +132,9 @@
                                     </li>
                                 </ul>
                                 <ul class="customerCare m-0 p-0">
-                                    <li class="cust_main leftmain position-relative d-inline-block h-auto align-middle">
+                                    <li class="cust_main leftmain position-relative d-inline-block h-auto align-middle text-nowrap" onmouseover="MenuSubOpen('#header #headerMenu .lsc2')" onmouseleave="MenuSubClose('#header #headerMenu .lsc2')">
                                         <a id="MenuMainTitle" href="#!" class="text-white">CUSTOMER CARE</a>
-                                        <div class="leftSubCategory lsc2 position-absolute start-0">
+                                        <div class="leftSubCategory lsc2 position-absolute start-0 d-none">
                                             <a href="#!" class="d-block text-white">NOTICE</a>
                                             <a href="#!" class="d-block text-white">REVIEW</a>
                                             <a href="#!" class="d-block text-white">Q&A</a>
@@ -454,24 +454,19 @@
         }
 
         function MenuSubOpen(sub){
-            sub.removeClass("d-none");
-            sub.addClass("d-block")
+            $(sub).removeClass("d-none");
         }
         function MenuSubClose(sub){
-            sub.removeClass("d-block");
-            sub.addClass("d-none");
+            $(sub).addClass("d-none");
         }
+        
         function MenuSearchClose(){
             $('#header .searchKeyword').removeClass("searchVisible");
         }
         function MenuSearchOpen(){
             $('#header .searchKeyword').addClass("searchVisible");
         }
-        $(".leftMenu .allProduct .leftmain").hover(function(){
-            $(".leftMenu .allProduct .leftmain").removeClass("d-none")
-        },function(){
-            $(this+' .sub').addClass("d-none")
-        })
+        
         window.addEventListener('scroll',function(){           
             if($(this).scrollTop() > 0){
                 $('#header nav').addClass("fixed-top bg-white");
