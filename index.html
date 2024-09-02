@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+    
     <title>Document</title>
     <style>
         body {
             min-width: 360px;
             max-width: 1920px;
+           
             /* background: var(--bg-color-body); */
         }
 
         .visual{
             position: relative;
+           
+            
+            
         }
         .txtArea{
             position:absolute;
-            right: 0;
-            bottom: 0;
+            right: 12%;
+            bottom: 15%;
+            
+        }
+        .txtArea2{
+            position:absolute;
+            left: 5%;
+            bottom: 10%;
             
 
+        }
+        .row>*{
+            padding-right: 0;
+           
+            
         }
 
     </style>
@@ -54,9 +75,20 @@
                                     <img src="./images/img1small.png" alt="" class="img-fluid d-sm-block d-lg-none">
 
 
-                                    <div class="txtArea text-white text-start ">
-                                        <h1>Air Candle Fresh Soap</h1>
-                                        <p>
+                                    <div class="txtArea text-white text-start d-none d-md-block">
+                                        <h1 class="h1font">Air Candle Fresh Soap</h1>
+                                        <p class="h1font">
+                                            <span class="text-white">냄새 OFF 향기 ON</span>
+                                            <br>
+                                            태우지 않고 그대로, 에어 캔들 탈취제 프레쉬솝
+                                        </p>
+                                        <button type="button" class="btn btn-outline-light">Light</button>
+                                        
+                                    </div>
+
+                                    <div class="txtArea2 text-white text-start d-block d-md-none">
+                                        <h1 class="h1font">Air Candle Fresh Soap</h1>
+                                        <p class="h1font">
                                             <span class="text-white">냄새 OFF 향기 ON</span>
                                             <br>
                                             태우지 않고 그대로, 에어 캔들 탈취제 프레쉬솝
@@ -71,9 +103,19 @@
                                     <img src="./images/imgSlide2.png" alt="" class="img-fluid d-sm-none d-lg-block">
                                     <img src="./images/img2small.png" alt="" class="img-fluid d-sm-block d-lg-none">
 
-                                    <div class="txtArea text-white text-start">
-                                        <h1>Air Candle</h1>
-                                        <p>
+                                    <div class="txtArea text-white text-start d-none d-md-block">
+                                        <h1 class="h1font">Air Candle</h1>
+                                        <p class="h1font">
+                                            <span class="text-white">냄새 OFF 향기 ON</span>
+                                            <br>
+                                            차량 탈취엔, 에어 캔들 탈취제 블랙체리
+                                        </p>
+                                        <button type="button" class="btn btn-outline-light">Light</button>
+                                        
+                                    </div>
+                                    <div class="txtArea2 text-white text-start d-block d-md-none">
+                                        <h1 class="h1font">Air Candle</h1>
+                                        <p class="h1font">
                                             <span class="text-white">냄새 OFF 향기 ON</span>
                                             <br>
                                             차량 탈취엔, 에어 캔들 탈취제 블랙체리
@@ -88,9 +130,21 @@
                                 <a href="#">
                                     <img src="./images/imgSlide3.jpg" alt="" class="img-fluid d-sm-none d-lg-block">
                                     <img src="./images/img3small.jpg" alt="" class="img-fluid d-sm-block d-lg-none"">
-                                    <div class="txtArea text-white text-start">
-                                        <h1>Air Candle Fresh Soap</h1>
-                                        <p>
+                                    <div class="txtArea text-white text-start d-none d-md-block">
+                                        <!-- b 10 left 5% position-absolute top-50-->
+                                        <h1 class="h1font">Air Candle Fresh Soap</h1>
+                                        <p class="h1font">
+                                            <span class="text-white">흔적은 지우고 향기만 남기세요</span>
+                                            <br>
+                                            태우지 않고 그대로, 에어 캔들 탈취제 프레쉬솝
+                                        </p>
+                                        <button type="button" class="btn btn-outline-light class="h1font"">Light</button>
+                                        
+                                    </div>
+                                    <div class="txtArea2 text-white text-start d-block d-md-none">
+                                        <!-- b 10 left 5% position-absolute top-50-->
+                                        <h1 class="h1font">Air Candle Fresh Soap</h1>
+                                        <p class="h1font">
                                             <span class="text-white">흔적은 지우고 향기만 남기세요</span>
                                             <br>
                                             태우지 않고 그대로, 에어 캔들 탈취제 프레쉬솝
@@ -151,6 +205,12 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
           loop : true,
+          
+          autoplay: {
+          delay: 2500,
+          
+          disableOnInteraction: false,
+          },
           pagination: {
             el: ".swiper-pagination",
           },

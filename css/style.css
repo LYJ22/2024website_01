@@ -4,6 +4,12 @@
 a:link,a:visited{text-decoration: none; color: black;}
 ul, li{list-style: none;}
 
+.container{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
 
 /* header */
 
@@ -12,7 +18,9 @@ ul, li{list-style: none;}
 .swiper {
     width: 100%;
     height: 100%;
+    
   }
+
 
   .swiper-slide {
     text-align: center;
@@ -21,6 +29,9 @@ ul, li{list-style: none;}
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    object-fit: cover;
+    
   }
 
   .swiper-slide img {
@@ -29,6 +40,14 @@ ul, li{list-style: none;}
     height: 100%;
     object-fit: cover;
   }
+
+  .textArea h1{
+    font-family: 'Noto-Sans-Condensed', 'Noto Sans KR';
+  }
+  .h1font{
+    font-family: 'Noto-Sans-Condensed', 'Noto Sans KR';
+  }
+  
 
 
 /* 상품 칸 - product */
